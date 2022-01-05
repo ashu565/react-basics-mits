@@ -1,28 +1,27 @@
 import Title from "./Components/Title";
-import Name from "./Components/Name";
+import Name, { pp, hello } from "./Components/Name";
+
 import Input from "./Components/Input";
 function App() {
 
+  const HandleClick = (e) => {
+    console.log("clicked : ", e)
+  }
+
+  const HandleChange = (e) => {
+    console.log(e.target.value);
+  }
+  const HandleKeyPress = (e) => {
+    // console.log(e.key)
+  }
   return (
-    <>
-      <Title name="Ajay" tata="1121" papa="sdaf" />
-      <Input name="xyz" />
-      <Input name="yxz" />
-      <Input name="pqr" />
-      <Input name="ppy" />
-      <Input name="daf">ppr</Input>
-      <div>Hey Raasdf</div>
-      <div>Hey Raasdf</div>
-      <div>Hey Raasdf</div>
-      <div>Hey Raasdf</div>
-      <div>Hey Raasdf</div>
-      <div>Hey Raasdfasdfasdf</div>
-
-      <Name name1="Ashutosh" name2="Singh" >Chauhan</Name>
-      <Name name1="Ashutosh" name2="Singh" >Aman</Name>
-      <Name name1="Ashutosh" name2="Singh" >Ajay</Name>
-
-    </>
+    <div className="container-main">
+      <input onKeyPress={HandleKeyPress} onChange={(e) => HandleChange(e)} className="inputtxt"></input>
+      <button onClick={e => {
+        console.log("Hey Clicked")
+      }} className="btn" >Submit</button>
+      <Name name1="Ashutosh" name2="Singh" />
+    </div>
   );
 }
 // React Fragment

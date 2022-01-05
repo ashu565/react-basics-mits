@@ -18,3 +18,28 @@ code {
 .container2 {
   color: green;
 }
+.btn {
+  background-color: indianred;
+  color: #fff;
+  padding: 8px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.btn:hover {
+  transform: scale(1.2);
+}
+
+.container-main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.inputtxt {
+  padding: 10px;
+  font-size: 20px;
+}

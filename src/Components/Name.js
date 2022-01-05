@@ -1,4 +1,4 @@
-export default function Name(props) {
+function Name(props) {
     return (
         <>
             <div>
@@ -9,3 +9,11 @@ export default function Name(props) {
         </>
     )
 }
+
+const pp = 5;
+
+const hello = () => {
+    console.log("Hyeee")
+}
+
+export { pp, hello, Name as default };
